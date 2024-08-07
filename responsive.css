@@ -1,0 +1,244 @@
+/* Responsive styles */
+
+@media (max-width:1285px) {
+    html {
+        font-size: 55%;
+    }
+
+    .services-container {
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 5rem;
+    }
+
+    .project-container {
+        gap: 150px 50px;
+    }
+
+    .footer {
+        padding: 25px 0;
+    }
+
+    .footer.container {
+        max-width: 60%;
+    }
+
+    .footer.row {
+        flex-direction: row;
+    }
+
+    .footer.col-md-4 {
+        flex-basis: 25%;
+    }
+}
+
+@media (max-width:991px) {
+    header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .timeline-item::before {
+        left: 7px;
+    }
+
+    .timeline-item:nth-child(odd) {
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        padding-left: 37px;
+    }
+
+    
+.timeline-items::before {
+    width: 0;
+}
+
+    .timeline-dot {
+        left: 0;
+    }
+
+    .services {
+        padding-bottom: 7rem;
+    }
+
+    .service-box {
+        padding-inline: 9px;
+    }
+
+    .service-info h4 {
+        line-height: 1.2;
+    }
+
+    .project .project-card {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-container {
+        gap: 100px 30px;
+    }
+
+    .contact form {
+        flex-direction: column;
+    }
+
+    .footer {
+        padding: 15px 0;
+    }
+
+    .footer.container {
+        max-width: 80%;
+    }
+
+    .footer.row {
+        flex-direction: row;
+    }
+
+    .footer.col-md-4 {
+        flex-basis: 50%;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 895px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+
+    .home-content p {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .home-img img {
+        width: 56vw;
+    }
+
+    .services h2 {
+        margin-bottom: 3rem;
+    }
+
+    .service-box {
+        padding-inline: 9px;
+    }
+
+    .service-box .service-info {
+        overflow: auto;
+        scroll-behavior: smooth;
+        max-height: max-content;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-container {
+        gap: 50px 20px;
+    }
+
+    .certificate-content p {
+        font-size: 1.8rem;
+        margin: auto;
+        max-width: -webkit-fill-available;
+    }
+
+    #notification-popup {
+        left: 50%;
+        max-width: 400px;
+        top: 100px;
+    }
+
+    #notification-message {
+        font-size: 1.4em;
+    }
+
+    .button {
+        font-size: 5px;
+        margin-left: 100px;
+    }
+
+    .footer {
+        padding: 10px 0;
+    }
+
+    .footer.container {
+        max-width: 90%;
+    }
+
+    .footer.row {
+        flex-direction: column;
+    }
+
+    .footer .social a {
+        font-size: 20px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+    }
+
+    .footer.col-md-4 {
+        flex-basis: 100%;
+    }
+
+    .footer .container .row #left-col {
+        overflow-y: scroll;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+        flex-basis: 66.33%;
+        height: 24rem;
+        margin-bottom: 20px;
+    }
+
+    .footer .container .row #right-col {
+        flex-basis: 100.33%;
+        margin-bottom: 20px;
+    }
+}
