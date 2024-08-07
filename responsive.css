@@ -1,6 +1,6 @@
 /* Responsive styles */
 
-@media (max-width:1285px) {
+@media (max-width: 1285px) {
     html {
         font-size: 55%;
     }
@@ -32,7 +32,7 @@
     }
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
     header {
         padding: 2rem 3%;
     }
@@ -55,10 +55,9 @@
         padding-left: 37px;
     }
 
-    
-.timeline-items::before {
-    width: 0;
-}
+    .timeline-items::before {
+        width: 0;
+    }
 
     .timeline-dot {
         left: 0;
@@ -240,5 +239,222 @@
     .footer .container .row #right-col {
         flex-basis: 100.33%;
         margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        width: 117vw;
+        font-size: 50%;
+        /* Adjust base font size for better readability on small screens */
+    }
+
+    .header {
+        padding: 2rem 5%;
+        /* Adjust padding for smaller screens */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 2rem;
+        /* Reduce logo size */
+    }
+
+    .navbar a {
+        font-size: 1.4rem;
+        /* Reduce font size for links */
+        margin-left: 2rem;
+        /* Adjust margin */
+    }
+
+    #menu-icon {
+        display: block;
+        /* Display menu icon on small screens */
+    }
+
+    section {
+        padding: 5rem 5%;
+        /* Adjust section padding */
+    }
+
+    .home {
+        flex-direction: column;
+        gap: 5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 3rem;
+        /* Reduce font size for headings */
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+        /* Reduce font size for subheadings */
+    }
+
+    .home-img img {
+        width: 70vw;
+        /* Adjust image size for small screens */
+    }
+
+    .social-icon a {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.8rem;
+        font-size: 1.4rem;
+        /* Adjust button size */
+    }
+
+    .service-box {
+        height: auto;
+        padding: 2rem;
+        /* Adjust padding */
+    }
+
+    .services-container {
+        margin: 0 2rem;
+    }
+
+    .footer {
+        padding: 10px 5%;
+        /* Adjust padding */
+    }
+
+    .footer .col-md-4 {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer ul {
+        font-size: 16px;
+        /* Adjust font size */
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    html {
+        font-size: 50%;
+        /* Adjust the base font size for smaller screens */
+    }
+
+    .header {
+        padding: 2rem 5%;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .navbar a {
+        font-size: 1.2rem;
+        margin-left: 2rem;
+    }
+
+    #menu-icon {
+        font-size: 2rem;
+        display: block;
+    }
+
+    section {
+        padding: 5rem 5%;
+        width: 200vw;
+    }
+
+    .home-content h1 {
+        font-size: 3rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content p {
+        font-size: 1.2rem;
+    }
+
+    .home-img img {
+        width: 60vw;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+        padding: 0.8rem 2rem;
+    }
+
+    .project-card {
+        width: 120.98vw;
+        height: 164.67vw;
+    }
+
+    .project-card .project-content {
+        top: 201px;
+    }
+
+    .project-card:hover>.project-content {
+        top: 64px;
+    }
+
+    .project-card>.img-box {
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .certificate-content h3 {
+        font-size: 2rem;
+    }
+
+    .certificate-content p {
+        font-size: 1.2rem;
+    }
+
+
+    .contact form {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact form .input-box {
+        width: 100%;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        font-size: 1.4rem;
+        padding: 1.5rem;
+    }
+
+    .footer {
+        width: 200vw;
+    }
+
+    .footer .col-md-4 {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .footer .social a {
+        font-size: 20px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer ul li {
+        display: block;
+        padding: 5px 0;
+    }
+
+    .footer ul li a {
+        font-size: 14px;
+    }
+
+    .footer .row {
+        display: block;
     }
 }
