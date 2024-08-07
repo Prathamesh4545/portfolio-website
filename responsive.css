@@ -322,6 +322,11 @@
         margin: 0 2rem;
     }
 
+    .project-card {
+        width: 67vw;
+        height: 107vw;
+    }
+
     .footer {
         padding: 10px 5%;
         /* Adjust padding */
@@ -335,6 +340,10 @@
     .footer ul {
         font-size: 16px;
         /* Adjust font size */
+    }
+
+    .footer .row {
+        display: block;
     }
 }
 
