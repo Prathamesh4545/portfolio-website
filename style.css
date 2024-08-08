@@ -599,10 +599,12 @@ section {
     padding: 15px;
     perspective: 100px;
     flex-shrink: 0;
+    transition: transform 1s, z-index 1s; 
 }
 
 .slide-container .slide-img img {
-    width: 240px;
+    aspect-ratio: 3/2;
+    width: 100%;
     object-fit: cover;
     border-radius: 22px;
     transition: transform 1s;
@@ -611,6 +613,11 @@ section {
 
 .slide-container .slide-img img:hover {
     transform: translateZ(20px);
+    z-index: 10; 
+}
+
+.slide-container .slide-img:not(:hover) {
+    z-index: 1; /* Stack non-hovered images behind */
 }
 
 .certificate-content {
