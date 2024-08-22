@@ -583,7 +583,7 @@ section {
 
 .certificate-container .slide-container {
     display: flex;
-    width: calc(var(--slide-width) * 5);
+    width: calc(var(--slide-width) * 6);
     will-change: transform;
 
     animation: scroll 40s linear infinite;
