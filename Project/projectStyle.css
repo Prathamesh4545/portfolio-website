@@ -10,7 +10,7 @@
     --hover-flex-basis: 550px;
     --border-radius: 15px;
     --transition-duration: 0.3s;
-    --box-shadow-color: rgba(0, 0, 0, 0.3);
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
     --hover-box-shadow-color: rgba(0, 0, 0, 0.5);
     --overlay-bg: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     --z-index-default: 1;
@@ -151,12 +151,14 @@ header h1:hover {
     left: 0;
     width: 100%;
     padding: 20px;
-    color: var(--bg-color); /* Set layer text color to background color */
+    color: var(--bg-color);
+    /* Set layer text color to background color */
     opacity: 0;
     transition: opacity var(--transition-duration) ease, transform var(--transition-duration) ease;
     transform: translateY(20px);
     will-change: transform, opacity;
-    background: var(--overlay-bg); /* Set layer background to overlay background */
+    background: var(--overlay-bg);
+    /* Set layer background to overlay background */
 }
 
 /* Show layer on card hover */
@@ -198,7 +200,8 @@ h2 {
     animation: fadeInUp 0.8s ease-out;
 }
 
-h3, h4 {
+h3,
+h4 {
     margin-top: 20px;
     color: #333;
 }
@@ -267,7 +270,9 @@ button:hover {
 }
 
 /* Form Styles */
-input, select, textarea {
+input,
+select,
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -277,7 +282,9 @@ input, select, textarea {
     transition: border-color 0.3s ease;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
     border-color: #333;
     outline: none;
 }
@@ -312,11 +319,20 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 895px) {
+
+    main {
+        margin-left: 5vw;
+        margin-right: -1vw;
+    }
+}
+
 @media (max-width: 768px) {
     main {
-        padding: 15px;
+        margin-right: 0vw;
+        margin-left: 7vw;
     }
-    
+
     header h1 {
         font-size: 1.5em;
     }
@@ -327,5 +343,29 @@ footer {
 
     h4 {
         font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        margin-left: 12vw;
+    }
+
+    main {
+        margin-right: -2vw;
+    }
+    .card:hover .layer {
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    main {
+        margin-left: 5vw;
+        margin-right: -9vw;
+    }
+
+    .card:hover .layer {
+        opacity: 0;
     }
 }

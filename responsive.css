@@ -183,6 +183,10 @@
         gap: 50px 20px;
     }
 
+    .project-card>.project-content>h2 {
+        margin-top: 1vw;
+    }
+
     .certificate-content p {
         font-size: 1.8rem;
         margin: auto;
@@ -324,7 +328,10 @@
 
     .project-card {
         width: 66vw;
-        height: 107vw;
+    }
+
+    .project-card>.project-content>h2 {
+        margin-top: 6px;
     }
 
     .footer {
