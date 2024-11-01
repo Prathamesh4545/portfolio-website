@@ -352,7 +352,8 @@ footer {
     }
 
     body {
-        width: 155vh;
+        /* width: 155vh; */
+        width: 56vh;
         margin: 0;
     }
 
