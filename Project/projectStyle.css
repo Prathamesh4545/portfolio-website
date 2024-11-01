@@ -351,15 +351,26 @@ footer {
         margin-left: 12vw;
     }
 
+    body {
+        width: 155vh;
+        margin: 0;
+    }
+
     main {
         margin-right: -2vw;
     }
+
     .card:hover .layer {
         opacity: 0;
     }
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 320px) {
+    body {
+        width: 151vh;
+        margin: 0;
+    }
+
     main {
         margin-left: 5vw;
         margin-right: -9vw;
