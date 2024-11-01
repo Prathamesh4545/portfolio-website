@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <link rel="shortcut icon" href="./logo/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./projectStyle.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Movie Ticket Booking</h1>
+    </header>
+    <div class="wrapper">
+        <div class="container">
+            <div class="card">
+                <img src="./img-project1/Admin-Panel.png" alt="Admin-Panel" class="image">
+                <div class="layer">
+                    <div class="info">
+                        <h2>Admin Panel</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img-project1/MovieHomePage.png" alt="MovieHomePage" class="image">
+                <div class="layer">
+                    <div class="info">
+                        <h2>Home Page</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img-project1/MovieProjectRun.png" alt="MovieProjectRun" class="image">
+                <div class="layer">
+                    <div class="info">
+                        <h2>Project Run</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img-project1/MovieOutputPage.png" alt="MovieOutputPage" class="image">
+                <div class="layer">
+                    <div class="info">
+                        <h2>Output Page</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="detail-info">
+            <h2>Project Details</h2>
+
+            <article>
+                <h3>Introduction</h3>
+                <p>
+                    The Movie-Ticket-Booking initiative is a basic project utilizing JSP/Servlet, Java, and PostgreSQL.
+                    It features two login pages: one for administrators and one for users. Administrators can manage
+                    movies
+                    and schedules, while users can select movies, book seats, and purchase tickets (silver, gold,
+                    platinum).
+                    Four database tables have been created: Admin, User, Movie, and Show.
+                </p>
+            </article>
+
+            <article>
+                <h3>Tables</h3>
+                <p>Here are the SQL queries to create the tables for this project:</p>
+
+                <h4>Admin</h4>
+                <pre><code>CREATE TABLE admin (
+  id BIGINT NOT NULL,
+  name VARCHAR(20),
+  email VARCHAR(50),
+  password VARCHAR(20),
+  PRIMARY KEY (id)
+);</code></pre>
+
+                <h4>User</h4>
+                <pre><code>CREATE TABLE users (
+  id SERIAL NOT NULL,
+  name VARCHAR(20) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  country VARCHAR(50) DEFAULT 'USA',
+  password VARCHAR(20) NOT NULL,
+  PRIMARY KEY (id)
+);</code></pre>
+
+                <h4>Movie</h4>
+                <pre><code>CREATE TABLE movie (
+  id SERIAL NOT NULL,
+  title CHAR(80) DEFAULT NULL,
+  genre CHAR(20) DEFAULT NULL,
+  duration INT DEFAULT NULL,
+  director CHAR(50) DEFAULT NULL,
+  PRIMARY KEY (id)
+);</code></pre>
+
+                <h4>Show</h4>
+                <pre><code>CREATE TABLE shows (
+  id SERIAL NOT NULL,
+  MId INT DEFAULT NULL,
+  screen INT DEFAULT NULL,
+  slot INT DEFAULT NULL,
+  booked INT DEFAULT NULL,
+  PRIMARY KEY (id),
+  CONSTRAINT shows_ibfk_1 FOREIGN KEY (MId) REFERENCES movie (id) ON DELETE CASCADE
+);</code></pre>
+            </article>
+
+            <section>
+                <h3>Screens / Pages</h3>
+
+                <article>
+                    <h4>1. Home Page</h4>
+                    <ul>
+                        <li>Task 1: Create User Login</li>
+                        <li>Task 2: Display table shows info with radio select options (Select, Movie, Show Slot,
+                            Duration, Screen No., Available)</li>
+                        <li>Task 3: Book Movie Box/Form with info (No. of seats dropdown, radio select options (Silver
+                            100, Gold 150, Platinum 200), Book Now button)</li>
+                        <li>Task 4: Book Now button will navigate to a servlet which will check for availability and
+                            show "Shows Full" or "Tickets Booked" and Paid amount</li>
+                        <li>Task 5: Consider variables like total=100, 200, etc., to calculate available capacity by
+                            total-booked</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h4>2. Admin Login</h4>
+                    <ul>
+                        <li>Task 1: Admin page after login will have 3 boxes: Add Movie, Schedule Movie, and Delete
+                            Movie</li>
+                        <li>Task 2: Add Movie (Movie name, genre, duration, director) - will add to the movie table</li>
+                        <li>Task 3: Schedule Movie (Movie ID, Screen No., Slot No.) - will add to the shows table</li>
+                        <li>Task 4: Delete Movie (Movie name) - will remove from the movie table</li>
+                        <li>Task 5: Display updated movie info (Movie ID, Title, Genre)</li>
+                    </ul>
+                </article>
+            </section>
+        </section>
+
+        <h2>SuccessFully Completed....</h2>
+    </main>
+
+
+    <script src="./project-script.js"></script>
+</body>
+
+</html>
