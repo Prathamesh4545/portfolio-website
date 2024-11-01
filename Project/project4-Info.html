@@ -179,6 +179,21 @@
                     <p>Include Flowbite CSS and JavaScript using CDN links in your HTML files for enhanced UI
                         components.</p>
                 </li>
+                <li>
+                    <strong>OAuth2 Client Configuration</strong>:
+                    <p>Add the following configurations in your <code>application.properties</code> file for Google and
+                        GitHub OAuth2 setup:</p>
+                    <h4>Google Configuration</h4>
+                    <code>spring.security.oauth2.client.registration.google.client-name=google</code>
+                    <code>spring.security.oauth2.client.registration.google.client-id= **add your own google api client id **</code>
+                    <code>spring.security.oauth2.client .registration.google.client-secret= **add also add your own google api client secret **</code>
+                    <code>spring.security.oauth2.client.registration.google.scope=email,profile</code>
+                    <h4>GitHub Configuration</h4>
+                    <code>spring.security.oauth2.client.registration.github.client-name=github</code>
+                    <code>spring.security.oauth2.client.registration.github.client-id= **add your own github api client id **</code>
+                    <code>spring.security.oauth2.client.registration.github.client-secret= **add also add your own github api client secret **</code>
+                    <code>spring.security.oauth2.client.registration.github.scope=email,profile</code>
+                </li>
             </ol>
         </section>
         <section>
